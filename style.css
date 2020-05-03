@@ -1,0 +1,409 @@
+/* resources: 
+color picker pallte: https://flatuicolors.com/
+color picker tool | shades of color: https://www.0to255.com/ 
+icon fonts: https://ionicons.com/
+    download the file and keep css and font folder
+
+*/
+
+
+/* 
+Box model:
+inline: no line break. no padding or margin. and dont take extra space. its usually used with another html elements
+ex: a, span, img
+block: start on a new line and takes full width of page from right to left. has line break before and after
+ex: div, h1, ol, li, pre, blockquote
+inline-block: act like an inline element but it doesnt force line break but it can have paring padding 
+
+hover: when pointer goes over the button
+active: when we click the button 
+
+:hover : works for everything except links i.e. <a />
+
+*/
+
+
+/* -------------------------------------------------------------------------------*/
+/*  GLOBAL STYLE - always set like this  */
+/* -------------------------------------------------------------------------------*/
+/* base color:
+whiteish: #fbe9d9
+orangeish: #e67e22
+orangedarkish: #b05d14
+base font size:20px
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #fff;
+    color:#555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    /* basic font size so everything can be relative */
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* -------------------------------------------------------------------------------*/
+/*  HEADER */
+/* -------------------------------------------------------------------------------*/
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.logo{
+    height: 100px;
+    width: auto;
+    float:left;
+    margin-top: 20px;
+}
+
+/* it is basically .main-nav=<ul> */
+.main-nav{
+    float:right;
+    list-style: none;
+    margin-top: 55px;
+}
+/* <li> is a block element but to show them side by side we need to make it inline-block */
+.main-nav li{
+    display: inline-block;
+    margin-left:40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+color: #fbe9d9;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 90%;
+padding: 8px 0;
+border-bottom: 2px solid transparent; 
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    /* color: #fbe9d9; */
+    border-bottom: 2px solid #e67e22;
+    transition: border-bottom .2s;
+
+    }
+
+
+/* -------------------------------------------------------------------------------*/
+/*  SECTION -1  FEATURES*/
+/* -------------------------------------------------------------------------------*/
+section{
+    padding: 80px 0;
+}
+.section-features .long-copy{
+    margin-bottom: 40px;
+
+}
+/* -------------------------------------------------------------------------------*/
+/*  SECTION -2 MEALS */
+/* -------------------------------------------------------------------------------*/
+.section-meals{
+    padding: 0;
+}
+
+/* it is ul */
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+.meals-showcase li{
+    width: 25%;
+    float: left;
+}
+/* it is figure */
+.meal-image{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+
+}
+.meal-image img{
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+    transform: scale(1.15);
+}
+.meal-image img:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    transition: transform 0.5s, opacity 0.5s;
+}
+.clearfix{
+    zoom:1;
+}
+.clearfix:after{
+    content:'.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+
+}
+
+/* -------------------------------------------------------------------------------*/
+/*  SECTION -3 MHOW IT WORKS */
+/* -------------------------------------------------------------------------------*/
+.section-steps{
+    background-color: #f4f4f4;
+}
+.step-box{
+    margin-top:30px;
+
+}
+.step-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top:30px;
+}
+.step-box:last-child{
+    padding-left: 3%;
+    margin-top:70px;
+
+}
+/* iphone image */
+.app-screen{
+    width: 40%;
+}
+.works-step{
+    margin-bottom: 50px;
+}
+.works-step:last-of-type{
+    margin-bottom: 90px;
+}
+.works-step div{
+    color:#e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+.btn-app img{
+    height:50px;
+    width: auto;
+    margin-right: 10px;
+}
+.btn-app:link,
+.btn-app:visited{
+    border:none;
+}
+
+/* -------------------------------------------------------------------------------*/
+/*  SECTION -4 CITIES */
+/* -------------------------------------------------------------------------------*/
+
+.section-cities{
+
+}
+.city-image{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+
+}
+.city-feature{
+    margin-bottom: 5px;
+}
+
+
+/* -------------------------------------------------------------------------------*/
+/*  SECTION -5 TESTIMONIALS */
+/* -------------------------------------------------------------------------------*/
+.section-testimonial{
+    background-color: #000;
+    padding:0;
+    margin-top: 80px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../resources/img/back-customers.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding:50px 0;
+    color:#fbe9d9
+}
+.testimonial-header{
+    color:#fbe9d9
+}
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+blockquote:before{
+    content:'\201C';
+    font-size:400%;
+    display: block;
+    position: absolute;
+    top:-5px;
+    left:-5px;
+}
+cite{
+    font-size: 90%;
+    margin-top: 20px;
+    display: block;
+}
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* -------------------------------------------------------------------------------*/
+/*  REUSABLE COMPONENTS */
+/* -------------------------------------------------------------------------------*/
+h1,h2,h3{
+    font-weight:300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+h1{
+    color:#fbe9d9;
+    font-size: 240%;
+    word-spacing: 4px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+h2{
+    color: #b05d14;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h2:after{
+    display: block;
+    height: 2px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    background-color: #e67e22;
+    content:"";
+}
+h3{
+    color: #b05d14;
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+    /* border:1px solid lightblue; */
+}
+
+/* -----------------  PARAGRAPH  ------------------ */
+.long-copy{
+    /* standard value for line height is 120%-150% */
+    line-height: 145%;
+    width: 66%;
+    margin-left: 17%;
+
+}
+.para-box{
+    padding: 1%;
+}
+
+.para-box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* -----------------  ICON  ------------------ */
+.customize-icon{
+    display: block;
+    font-size: 300%;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+.icon-small{
+    color: #e67e22;
+    display: inline-block;
+    width:30px;
+    text-align: center;
+    font-size: 120%;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* -----------------  LINKS  ------------------ */
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+
+
+}
+a:hover,
+a:active{
+    color:#b05d14;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+/* -----------------  BUTTON  ------------------ */
+.btn:link,
+.btn:visited,
+.btn:active{
+    display: inline-block;
+    border-radius: 50px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 300;
+    color:#fbe9d9;
+    border:1px solid #e67e22;
+
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited{
+    background-color: #e67e22;
+    margin-right: 12px;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    color: #e67e22;
+}
+.btn:hover,
+.btn:active{
+    background-color: #b05d14;
+    color: #fbe9d9;
+    border: 1px solid #f6ceab;
+
+}
+
